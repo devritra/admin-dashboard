@@ -26,9 +26,11 @@
 .sidebar .navigation>.navigation_cells>svg{
     width: 1.3rem;
 }
-.sidebar .navigation>.navigation_cells>p{
+.sidebar .navigation>.navigation_cells>a{
     font-size: 1.3rem;
     font-weight: bold;
+    text-decoration: none;
+    color: white;
 }
 .sidebar_heading,
 .sidebar .navigation_cells{
