@@ -24,13 +24,16 @@
     fill: white;
 }
 .sidebar_heading>svg{
-    width: 3rem;
+    width: 3.5rem;
+}
+.sidebar_heading>h1{
+    font-size: 2.5rem;
 }
 .sidebar .navigation>.navigation_cells>svg{
-    width: 1.3rem;
+    width: 1.5rem;
 }
 .sidebar .navigation>.navigation_cells>a{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
     color: white;
@@ -41,15 +44,15 @@
     align-items: center;
 }
 .sidebar_heading{
-    gap: 10px;
+    gap: 13px;
 }
 .navigation{
-    padding-left: 8px;
+    padding-left: 10px;
     display: grid;
     gap: 18px;
 }
 .navigation_cells{
-    gap: 18px;
+    gap: 20px;
 }
 
 /* header styles */
@@ -59,26 +62,32 @@
     grid-template-columns: 3fr 2fr;
 }
 .header svg{
-    width: 1.3rem;
+    width: 1.7rem;
+}
+.header_search>input{
+    background-color: rgb(177, 177, 177);
+    border: none;
+    border-radius: 25px;
+    height: 30px;
 }
 .top_right_pfp>img{
     border-radius: 50%;
-    width: 2.5rem;
+    width: 2.7rem;
 }
 .top_right_username{
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 .header_profile>.main_pfp>img{
     border-radius: 50%;
-    width: 4rem;
+    width: 4.2rem;
 }
 .header_profile>.profile_right>.greetings{
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 .header_profile>.profile_right>.main_username{
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     font-weight: bold;
 }
 .header_buttons>button{
@@ -87,4 +96,5 @@
     color: white;
     border: none;
     background-color: rgb(45, 157, 255);
+    font-size: 1.1rem;
 }
