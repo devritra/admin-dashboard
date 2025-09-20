@@ -11,3 +11,12 @@
     grid-column: 1/2;
     grid-row: 1/3;
 }
+.sidebar_heading>svg{
+    width: 3rem;
+}
+.sidebar .navigation>.navigation_cells>svg{
+    width: 1.3rem;
+}
+.sidebar .navigation>.navigation_cells>p{
+    font-size: 1.3rem;
+}
