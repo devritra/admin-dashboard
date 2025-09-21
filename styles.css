@@ -80,6 +80,9 @@
 .header_search>input:focus{
     outline: none;
 }
+.header_search>input::-webkit-search-cancel-button{
+    appearance: none;
+}
 .top_right_pfp>img{
     border-radius: 50%;
     width: 2.7rem;
