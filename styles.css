@@ -173,6 +173,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     gap: 20px;
+    align-content: start;
+    margin-right: 20px;
 }
 .announcement_section>h2{
     margin-bottom: 15px;
@@ -213,4 +215,8 @@
 }
 .trending_card_cells p:last-of-type{
     color: rgb(116, 116, 116);
+}
+.trending_card_cells img{
+    border-radius: 50%;
+    width: 2.3rem;
 }
