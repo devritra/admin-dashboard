@@ -53,8 +53,6 @@
 :root.dark{
     --black: black;
     --white: white;
-    --blue: rgb(0, 84, 158);
-    --yellow: rgb(255, 200, 19);
     --dark-mode-gray: rgb(58, 58, 58);
     --dark-mode-purple: rgb(119, 3, 99);
     --shadow-gray: rgb(194, 194, 194);
