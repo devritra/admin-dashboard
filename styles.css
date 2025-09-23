@@ -10,6 +10,89 @@
 :root{
     --the-font-for-everything: robotoregular,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+:root.light{
+    --black: black;
+    --white: white;
+    --blue: rgb(45, 157, 255);
+    --yellow: rgb(255, 200, 19);
+    --shadow-gray: rgb(194, 194, 194);
+    --search-bar-gray: rgb(220, 220, 220);
+    --main-content-background-gray: rgb(235, 235, 235);
+    --para-text-gray: rgb(116, 116, 116);
+    --announcement-inner-line-gray: rgb(205, 205, 205);
+
+    --color-text-sidebar: var(--white);
+    --color-svg-sidebar: var(--white);
+    --color-text-header: var(--black);
+    --color-svg-header: var(--black);
+    --color-btn-header: var(--white);
+    --color-shadow-header: var(--shadow-gray);
+    --color-headings-main-content: var(--black);
+    --color-titles-project-card: var(--black);
+    --color-para-text-project-card: var(--para-text-gray);
+    --color-left-border-project-card: var(--yellow);
+    --color-svg-project-card: var(--black);
+    --color-svg-hover-project-card: var(--yellow);
+    --color-titles-announcement-card: var(--black);
+    --color-shadow-project-card: var(--shadow-gray);
+    --color-para-text-announcement-card: var(--para-text-gray);
+    --color-inner-lines-announcement-card: var(--announcement-inner-line-gray);
+    --color-shadow-announcement-card: var(--shadow-gray);
+    --color-titles-trending-card: var(--black);
+    --color-para-text-trending-card: var(--para-text-gray);
+    --color-shadow-trending-card: var(--shadow-gray);
+    --bg-color-sidebar: var(--blue);
+    --bg-color-search-header: var(--search-bar-gray);
+    --bg-color-header: var(--white);
+    --bg-color-btn-header: var(--blue);
+    --bg-color-main-content: var(--main-content-background-gray);
+    --bg-color-project-card: var(--white);
+    --bg-color-announcement-card: var(--white);
+    --bg-color-trending-card: var(--white);
+}
+:root.dark{
+    --black: black;
+    --white: white;
+    --blue: rgb(0, 84, 158);
+    --yellow: rgb(255, 200, 19);
+    --dark-mode-gray: rgb(58, 58, 58);
+    --dark-mode-purple: rgb(119, 3, 99);
+    --shadow-gray: rgb(194, 194, 194);
+    --search-bar-gray: rgb(108, 108, 108);
+    --main-content-background-gray: rgb(109, 109, 109);
+    --para-text-gray: rgb(255, 255, 255);
+    --announcement-inner-line-gray: rgb(205, 205, 205);
+
+    --color-text-sidebar: var(--white);
+    --color-svg-sidebar: var(--white);
+    --color-text-header: var(--white);
+    --color-svg-header: var(--white);
+    --color-search-header: var(--white);
+    --color-btn-header: var(--white);
+    --color-shadow-header: var(--shadow-gray);
+    --color-headings-main-content: var(--white);
+    --color-titles-project-card: var(--white);
+    --color-para-text-project-card: var(--para-text-gray);
+    --color-left-border-project-card: var(--dark-mode-purple);
+    --color-svg-project-card: var(--white);
+    --color-svg-hover-project-card: var(--dark-mode-purple);
+    --color-titles-announcement-card: var(--white);
+    --color-shadow-project-card: var(--shadow-gray);
+    --color-para-text-announcement-card: var(--para-text-gray);
+    --color-inner-lines-announcement-card: var(--announcement-inner-line-gray);
+    --color-shadow-announcement-card: var(--shadow-gray);
+    --color-titles-trending-card: var(--white);
+    --color-para-text-trending-card: var(--para-text-gray);
+    --color-shadow-trending-card: var(--shadow-gray);
+    --bg-color-sidebar: var(--dark-mode-purple);
+    --bg-color-search-header: var(--search-bar-gray);
+    --bg-color-header: var(--dark-mode-gray);
+    --bg-color-btn-header: var(--dark-mode-purple);
+    --bg-color-main-content: var(--main-content-background-gray);
+    --bg-color-project-card: var(--dark-mode-gray);
+    --bg-color-announcement-card: var(--dark-mode-gray);
+    --bg-color-trending-card: var(--dark-mode-gray);
+}
 
 *, *::before, *::after{
     margin: 0;
@@ -30,12 +113,13 @@
     display: grid;
     gap: 50px;
     padding: 15px;
-    background-color: rgb(45, 157, 255);
-    color: white;
+    background-color: var(--bg-color-sidebar);
+    color: var(--color-text-sidebar);
     align-content: start;
+    z-index: 2;
 }
 .sidebar svg{
-    fill: white;
+    fill: var(--color-svg-sidebar);
 }
 .sidebar_heading>svg{
     width: 3.5rem;
@@ -50,7 +134,7 @@
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
-    color: white;
+    color: var(--color-text-sidebar);
 }
 .sidebar_heading,
 .sidebar .navigation_cells{
@@ -76,14 +160,18 @@
     grid-template-columns: 3fr 2fr;
     padding: 20px 60px;
     gap: 28px 40px;
-    box-shadow: 0px 5px 10px rgb(183, 183, 183);
+    box-shadow: 0px 5px 10px var(--color-shadow-header);
     z-index: 1;
+    background-color: var(--bg-color-header);
+    color: var(--color-text-header);
 }
 .header svg{
     width: 1.7rem;
+    fill: var(--color-svg-header);
 }
 .header_search>input{
-    background-color: rgb(220, 220, 220);
+    background-color: var(--bg-color-search-header);
+    color: var(--color-search-header);
     border: none;
     border-radius: 25px;
     height: 30px;
@@ -120,9 +208,9 @@
 .header_buttons>button{
     padding: 8px 24px;
     border-radius: 25px;
-    color: white;
+    color: var(--color-btn-header);
     border: none;
-    background-color: rgb(45, 157, 255);
+    background-color: var(--bg-color-btn-header);
     font-size: 1.1rem;
 }
 .header_search{
@@ -155,8 +243,9 @@
     display: grid;
     grid-template-columns: 3fr 1fr;
     padding: 20px;
-    background-color: rgb(235, 235, 235);
+    background-color: var(--bg-color-main-content);
     gap: 20px;
+    color: var(--color-headings-main-content);
 }
 .project_grid_container{
     display: grid;
@@ -165,14 +254,15 @@
     margin-top: 15px;
 }
 .project_cards{
-    background-color: white;
+    background-color: var(--bg-color-project-card);
     padding: 20px;
     border-radius: 10px;
-    border-left: 8px solid rgb(255, 200, 19);
-    box-shadow: 1px 3px 5px rgb(194, 194, 194);
+    border-left: 8px solid var(--color-left-border-project-card);
+    box-shadow: 1px 3px 5px var(--color-shadow-project-card);
 }
 .project_card_icon_holder>svg{
     width: 1.5rem;
+    fill: var(--color-svg-project-card);
 }
 .project_card_icon_holder{
     display: flex;
@@ -182,9 +272,10 @@
 }
 .project_cards>h3{
     margin-bottom: 5px;
+    color: var(--color-titles-project-card);
 }
 .project_cards>p{
-    color: rgb(116, 116, 116);
+    color: var(--color-para-text-project-card);
 }
 .announcement_and_trending_section{
     display: grid;
@@ -198,8 +289,12 @@
 }
 .announcement_card{
     padding: 30px;
-    background-color: white;
+    background-color: var(--bg-color-announcement-card);
     border-radius: 10px;
+    box-shadow: 1px 3px 5px var(--color-shadow-announcement-card);
+}
+.announcement_card h4{
+    color: var(--color-titles-announcement-card);
 }
 .announcement_card>div:first-of-type{
     padding-bottom: 20px;
@@ -207,33 +302,60 @@
 .announcement_card>div:first-of-type+div{
     padding-top: 20px;
     padding-bottom: 20px;
-    border-top: 1px solid rgb(205, 205, 205);
-    border-bottom: 1px solid rgb(205, 205, 205);
+    border-top: 1px solid var(--color-inner-lines-announcement-card);
+    border-bottom: 1px solid var(--color-inner-lines-announcement-card);
 }
 .announcement_card>div:last-of-type{
     padding-top: 20px;
 }
 .announcement_card>div>p{
-    color: rgb(116, 116, 116);
+    color: var(--color-para-text-announcement-card);
 }
 .trending_section>h2{
     margin-bottom: 15px;
 }
 .trending_card{
-    background-color: white;
+    background-color: var(--bg-color-trending-card);
     border-radius: 10px;
     padding: 20px;
     display: grid;
     gap: 20px;
+    box-shadow: 1px 3px 5px var(--color-shadow-trending-card);
 }
 .trending_card_cells{
     display: flex;
     gap: 15px;
 }
 .trending_card_cells p:last-of-type{
-    color: rgb(116, 116, 116);
+    color: var(--color-para-text-trending-card);
+}
+.trending_card_cells p:first-of-type{
+    color: var(--color-titles-trending-card);
 }
 .trending_card_cells img{
     border-radius: 50%;
     width: 2.3rem;
+}
+.header_buttons>button,
+.project_cards svg,
+.header>.header_top_right svg{
+    cursor: pointer;
+}
+.header_buttons>button:hover,
+.sidebar a:hover{
+    opacity: 0.5;
+    transform: scale(1.07);
+    transition: 0.2s;
+}
+.project_cards:hover,
+.header>.header_top_right svg:hover{
+    transform: scale(1.02);
+    transition: 0.2s;
+}
+.project_cards svg:hover{
+    fill: var(--color-svg-hover-project-card);
+}
+.header>.header_top_right svg:hover{
+    transform: scale(1.15);
+    transition: 0.2s;
 }
