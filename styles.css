@@ -160,7 +160,7 @@
     grid-template-columns: 3fr 2fr;
     padding: 20px 60px;
     gap: 28px 40px;
-    box-shadow: 0px 5px 10px var(--color-shadow-header);
+    box-shadow: 0px 5px 30px var(--color-shadow-header);
     z-index: 1;
     background-color: var(--bg-color-header);
     color: var(--color-text-header);
@@ -258,7 +258,7 @@
     padding: 20px;
     border-radius: 10px;
     border-left: 8px solid var(--color-left-border-project-card);
-    box-shadow: 1px 3px 5px var(--color-shadow-project-card);
+    box-shadow: 1px 3px 15px var(--color-shadow-project-card);
 }
 .project_card_icon_holder>svg{
     width: 1.5rem;
@@ -291,7 +291,7 @@
     padding: 30px;
     background-color: var(--bg-color-announcement-card);
     border-radius: 10px;
-    box-shadow: 1px 3px 5px var(--color-shadow-announcement-card);
+    box-shadow: 1px 3px 15px var(--color-shadow-announcement-card);
 }
 .announcement_card h4{
     color: var(--color-titles-announcement-card);
@@ -320,7 +320,7 @@
     padding: 20px;
     display: grid;
     gap: 20px;
-    box-shadow: 1px 3px 5px var(--color-shadow-trending-card);
+    box-shadow: 1px 3px 15px var(--color-shadow-trending-card);
 }
 .trending_card_cells{
     display: flex;
